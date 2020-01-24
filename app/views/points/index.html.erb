@@ -1,1 +1,26 @@
-<h1>Hola mundo</h1>
+<h1>Puntos</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Nombre</th>
+    <th>Centro de Costo</th>
+    <th>Tecnologia</th>
+    <th>Observacion</th>
+    <th>Ip Radio</th>
+    <th>Ip Telefono</th>
+    <th>Ip Computador</th>
+  </tr>
+  <% @points.each do |point| %>
+    <tr>
+      <td><%= point.id %></td>
+      <td><%= point.name %></td>
+      <td><%= point.ccosto %></td>
+      <td><%= point.tecnologia %></td>
+      <td><%= point.observacion %></td>
+      <td><%= point.ipradio %></td>
+      <td><%= point.iptele %></td>
+      <td><%= point.ipcom %></td>
+    </tr>
+  <% end %>
+</table>
