@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_22_145721) do
+ActiveRecord::Schema.define(version: 2020_01_24_075200) do
+
+  create_table "points", force: :cascade do |t|
+    t.string "name"
+    t.string "ccosto"
+    t.string "tecnologia"
+    t.text "observacion"
+    t.string "ipradio"
+    t.string "iptele"
+    t.string "ipcom"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "cuenta"

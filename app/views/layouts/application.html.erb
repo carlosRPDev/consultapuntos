@@ -10,6 +10,7 @@
   </head>
 
   <body>
+
     <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-danger">
       <div class="container">
@@ -61,8 +62,9 @@
     </nav>
     <!--/.Navbar -->
 
+
     <% if signed_in? %>
-      <div>Hola, <%= current_user.name %> <%= link_to "Salir", logout_path, method: :delete %></div>
+      <div>Hola <%= current_user.name %> <%= link_to "Salir", logout_path, method: :delete %></div>
     <% end %>
 
     <%= yield %>
