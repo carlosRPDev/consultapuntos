@@ -1,0 +1,35 @@
+<div class="container pt-5">
+  <div class="row border border-bottom bg-light shadow rounded">
+    <div class="col-sm-7 pt-3">
+      <h1>Ingresar Nuevo Punto de venta</h1>
+    </div>
+    <div class="col-sm-5 pt-3">
+      <%= form_for @points do |f| %>
+        <div class="form-group">
+          <%= f.text_field :name, class: "form-control form-control-sm", placeholder: "Ingresa el nombre del punto" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :ccosto, class: "form-control form-control-sm", placeholder: "Ingresa el centro de costo" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :tecnologia, class: "form-control form-control-sm", placeholder: "Ingresa la tecnologia" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_area :observacion, class: "form-control form-control-sm", placeholder: "Ingresa las observaciones" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :ipradio, class: "form-control form-control-sm", placeholder: "Ingresa la Ip del radio" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :iptele, class: "form-control form-control-sm", placeholder: "Ingresa la Ip del telefono" %>
+        </div>
+        <div class="form.group">
+          <%= f.text_field :ipcom, class: "form-control form-control-sm", placeholder: "ingresa la Ip del computador" %>
+        </div>
+        <div class="d-flex justify-content-end my-3">
+          <%= f.submit "Ingresar punto de venta", class: "btn btn-danger btn-sm" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
