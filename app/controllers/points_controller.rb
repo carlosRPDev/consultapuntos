@@ -24,6 +24,15 @@ class PointsController < ApplicationController
     @point = Point.find(params[:id])
   end
 
+  def update
+    @point = Point.find(params[:id])
+    if @point.update(point_params)
+      redirect_to points_path, notice: "El punto fue modificado con exito"
+    else
+      render :edit
+    end
+  end
+
   private
     def point_params
       params.require(:point).permit(:name, :ccosto, :tecnologia, :observacion, :ipradio, :iptele, :ipcom)

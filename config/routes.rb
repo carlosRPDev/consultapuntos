@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post '/points', to: 'points#create'
   get '/points/:id', to: 'points#show', as: 'point'
   get '/points/:id/edit', to: 'points#edit'
+  patch '/points/:id', to: 'points#update'
 
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
