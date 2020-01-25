@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     user = User.find_by(cuenta: params[:cuenta])
     if user && user.authenticate(params[:password])
       sign_in(user)
-      redirect_to root_path
+      redirect_to points_path
     else
       render :new
     end
