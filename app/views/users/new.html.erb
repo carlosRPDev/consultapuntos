@@ -1,6 +1,6 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
+<div class="container p-3">
+  <div class="row justify-content-center p-3">
+    <div class="col-sm-6 shadow border rounded">
       <h1>Crear Cuenta</h1>
 
       <%= form_for @user do |f| %>
@@ -17,7 +17,7 @@
         </div>
 
         <div class="actions">
-          <%= f.submit class: "btn btn-danger btn-block btn-lg" %>
+          <%= f.submit class: "btn btn-danger btn-block btn-lg my-3" %>
         </div>
       <% end %>
     </div>
