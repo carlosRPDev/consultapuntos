@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/points/new', to: 'points#new', as: 'new_point'
   post '/points', to: 'points#create'
   get '/points/:id', to: 'points#show', as: 'point'
-  get '/points/:id/edit', to: 'points#edit'
+  get '/points/:id/edit', to: 'points#edit', as: 'edit_point'
   patch '/points/:id', to: 'points#update'
 
   get 'login', to: 'sessions#new'

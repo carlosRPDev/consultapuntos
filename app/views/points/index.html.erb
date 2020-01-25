@@ -13,6 +13,7 @@
             <th>Ip Radio</th>
             <th>Ip Telefono</th>
             <th>Ip Computador</th>
+            <th></th>
           </tr>
         <% @point.each do |point| %>
         <tr>
@@ -24,6 +25,7 @@
           <td><%= point.ipradio %></td>
           <td><%= point.iptele %></td>
           <td><%= point.ipcom %></td>
+          <td><%= link_to "Editar", edit_point_path(point) %></td>
         </tr>
         <% end %>
       </table>
