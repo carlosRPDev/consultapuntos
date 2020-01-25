@@ -1,23 +1,23 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 mt-3">
+    <div class="col-sm-8">
       <h1>Puntos de ventas</h1>
 
-      <div class="container d-flex justify-content-end mt-3 my-3">
+      <div class="container d-flex justify-content-end m-3">
         <%= link_to "Ingresar nuevo punto de venta", new_point_path, class: "btn btn-danger" %>
       </div>
 
-      <table class="table">
-        <tr>
-          <th>Id</th>
-          <th>Nombre</th>
-          <th>Centro de Costo</th>
-          <th>Tecnologia</th>
-          <th>Observacion</th>
-          <th>Ip Radio</th>
-          <th>Ip Telefono</th>
-          <th>Ip Computador</th>
-        </tr>
+      <table class="table table-hover table-sm">
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Centro de Costo</th>
+            <th>Tecnologia</th>
+            <th>Observacion</th>
+            <th>Ip Radio</th>
+            <th>Ip Telefono</th>
+            <th>Ip Computador</th>
+          </tr>
         <% @points.each do |point| %>
         <tr>
           <td><%= point.id %></td>
@@ -31,6 +31,9 @@
         </tr>
         <% end %>
       </table>
+    </div>
+    <div class="col-sm-4">
+        <h1>Buscar punto de venta</h1>
     </div>
   </div>
 </div>
