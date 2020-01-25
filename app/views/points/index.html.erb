@@ -25,7 +25,10 @@
           <td><%= point.ipradio %></td>
           <td><%= point.iptele %></td>
           <td><%= point.ipcom %></td>
-          <td><%= link_to "Editar", edit_point_path(point) %></td>
+          <td>
+            <%= link_to "Editar", edit_point_path(point) %>
+            <%= link_to "Eliminar", point, method: :delete, data: { confirm: "Se eliminara este punto" } %>
+          </td>
         </tr>
         <% end %>
       </table>
