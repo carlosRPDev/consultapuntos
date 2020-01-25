@@ -25,12 +25,19 @@ class PointsController < ApplicationController
   end
 
   def update
-    @point = Point.find(params[:id])
-    if @point.update(point_params)
+    point = Point.find(params[:id])
+    if point.update(point_params)
       redirect_to points_path, notice: "El punto fue modificado con exito"
     else
       render :edit
     end
+  end
+
+  def destroy
+    point = Point.find(params[:id])
+    point.destroy
+
+    redirect_to points_path, notice: "El punto fue eliminado con exito"
   end
 
   private
