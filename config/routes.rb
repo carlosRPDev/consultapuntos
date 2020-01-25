@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  get '/points', to: 'points#index'
-  get '/points/new', to: 'points#new', as: 'new_point'
-  post '/points', to: 'points#create'
-  get '/points/:id', to: 'points#show', as: 'point'
-  get '/points/:id/edit', to: 'points#edit', as: 'edit_point'
-  patch '/points/:id', to: 'points#update'
-  delete 'points/:id', to: 'points#destroy'
+
+  resources :points
 
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
@@ -14,4 +9,6 @@ Rails.application.routes.draw do
   # resources :users, only: [:new, :create]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  root 'sessions#new'
 end
