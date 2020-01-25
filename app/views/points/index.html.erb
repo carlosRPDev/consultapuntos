@@ -17,7 +17,7 @@
         <% @point.each do |point| %>
         <tr>
           <td><%= point.id %></td>
-          <td><%= point.name %></td>
+          <td><%= link_to point.name, point %></td>
           <td><%= point.ccosto %></td>
           <td><%= point.tecnologia %></td>
           <td><%= point.observacion %></td>
