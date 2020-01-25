@@ -1,10 +1,10 @@
 class PointsController < ApplicationController
   def index
-    @points = Point.all
+    @point = Point.all
   end
 
   def new
-    @points = Point.new
+    @point = Point.new
   end
 
   def create
@@ -18,6 +18,19 @@ class PointsController < ApplicationController
 
   def show
     @point = Point.find(params[:id])
+  end
+
+  def edit
+    @point = Point.find(params[:id])
+  end
+
+  def update
+    @point = Point.find(params[:id])
+    if @point.update(point_params)
+      redirect_to points_path, notice: "El punto fue modificado con exito"
+    else
+      render :edit
+    end
   end
 
   private

@@ -13,17 +13,19 @@
             <th>Ip Radio</th>
             <th>Ip Telefono</th>
             <th>Ip Computador</th>
+            <th></th>
           </tr>
-        <% @points.each do |point| %>
+        <% @point.each do |point| %>
         <tr>
           <td><%= point.id %></td>
-          <td><%= point.name %></td>
+          <td><%= link_to point.name, point %></td>
           <td><%= point.ccosto %></td>
           <td><%= point.tecnologia %></td>
           <td><%= point.observacion %></td>
           <td><%= point.ipradio %></td>
           <td><%= point.iptele %></td>
           <td><%= point.ipcom %></td>
+          <td><%= link_to "Editar", edit_point_path(point) %></td>
         </tr>
         <% end %>
       </table>
