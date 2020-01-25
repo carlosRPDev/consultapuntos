@@ -16,6 +16,10 @@ class PointsController < ApplicationController
     end
   end
 
+  def show
+    @point = Point.find(params[:id])
+  end
+
   private
     def point_params
       params.require(:point).permit(:name, :ccosto, :tecnologia, :observacion, :ipradio, :iptele, :ipcom)
