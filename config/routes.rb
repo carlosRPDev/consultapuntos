@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   get '/points', to: 'points#index'
   get '/points/new', to: 'points#new', as: 'new_point'
   post '/points', to: 'points#create'
-  get '/points/:id', to: 'points#show'
+  get '/points/:id', to: 'points#show', as: 'point'
+  get '/points/:id/edit', to: 'points#edit'
 
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
