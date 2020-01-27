@@ -1,4 +1,6 @@
 class PointsController < ApplicationController
+  before_action :private_access, except: [:index, :show]
+
   def index
     @point = Point.all
   end

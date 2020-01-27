@@ -27,6 +27,6 @@ class ApplicationController < ActionController::Base
     end
 
     def public_access
-      redirect_to login_path if signed_in?
+      redirect_to points_path if signed_in?
     end
 end
