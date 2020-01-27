@@ -26,8 +26,10 @@
           <td><%= point.iptele %></td>
           <td><%= point.ipcom %></td>
           <td>
-            <%= link_to "Editar", edit_point_path(point) %>
-            <%= link_to "Eliminar", point, method: :delete, data: { confirm: "Se eliminara este punto" } %>
+            <% if signed_in? %>
+              <%= link_to "Editar", edit_point_path(point) %>
+              <%= link_to "Eliminar", point, method: :delete, data: { confirm: "Se eliminara este punto" } %>
+            <% end %>
           </td>
         </tr>
         <% end %>
@@ -42,9 +44,12 @@
           </div>
         </div>
       </form>
+
+      <% if signed_in? %>
       <div class="container d-flex justify-content-end m-3">
         <%= link_to "Nuevo punto de venta", new_point_path, class: "btn btn-danger" %>
       </div>
+      <% end %>
     </div>
 
   </div>
