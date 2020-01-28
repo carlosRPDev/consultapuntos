@@ -1,0 +1,19 @@
+es:
+  errors:
+    messages:
+      blank: "no puede estar en blanco"
+      invalid: "es invalido"
+
+  activerecord:
+    attributes:
+      user:
+        name: "Nombre"
+        password: "Contraseña"
+      point:
+        name: "Nombre"
+        ccosto: "Centro de costo"
+        tecnologia: "Tenologia"
+        observacion: "Observacion"
+        ipradio: "Ip radio"
+        iptele: "Ip telefono"
+        ipcom: "Ip computador"
