@@ -52,8 +52,9 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right dropdown-default"
                 aria-labelledby="navbarDropdownMenu">
-                <a class="dropdown-item"><%= link_to "Agregar", new_point_path %></a>
-                <a class="dropdown-item"><%= link_to "Salir", logout_path, method: :delete %></a>
+                <%= link_to "Agregar", new_point_path, class: "dropdown-item" %>
+                <div class="dropdown-divider"></div>
+                <%= link_to "Salir", logout_path, class: "dropdown-item", method: :delete %>
                 <!-- <a class="dropdown-item" href="#">una accion</a> -->
                 <!-- <a class="dropdown-item" href="#">otra accion</a> -->
               </div>
