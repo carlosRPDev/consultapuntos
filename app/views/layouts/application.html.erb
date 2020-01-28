@@ -10,7 +10,7 @@
   </head>
 
   <body>
-
+  <% if signed_in? %>
     <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-danger">
       <div class="container">
@@ -52,9 +52,10 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right dropdown-default"
                 aria-labelledby="navbarDropdownMenu">
-                <a class="dropdown-item" href="#">Ingresar</a>
-                <!-- <a class="dropdown-item" href="#">una accion</a>
-                <a class="dropdown-item" href="#">otra accion</a> -->
+                <a class="dropdown-item"><%= link_to "Agregar", new_point_path %></a>
+                <a class="dropdown-item"><%= link_to "Salir", logout_path, method: :delete %></a>
+                <!-- <a class="dropdown-item" href="#">una accion</a> -->
+                <!-- <a class="dropdown-item" href="#">otra accion</a> -->
               </div>
             </li>
           </ul>
@@ -62,10 +63,7 @@
       </div>
     </nav>
     <!--/.Navbar -->
-    <% if signed_in? %>
-    <div>Hola <%= current_user.name %> <%= link_to "Salir", logout_path, method: :delete %></div>
-    <% end %>
-
+<% end %>
     <% if flash[:notice] %>
       <div class="container alert alert-success alert-dismissible fade show">
         <button type="button" class="close" data-dismiss="alert">&times;</button>

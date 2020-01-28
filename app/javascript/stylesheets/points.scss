@@ -1,0 +1,51 @@
+.points {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .point {
+    padding: 15px 10px;
+    border-radius: 5px;
+
+    &:hover{ background: #F8E0E0; }
+
+    .point-details {
+      float: left;
+
+      .point-title a {
+        color: #303030;
+        font-size: 21px;
+        line-height: 1;
+
+        &:hover, &:focus { color: #DF0101; text-decoration: none; }
+      }
+      .point-description {
+        display: block;
+        color: #999;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.point-page {
+  .point-header {
+    background: #303030;
+    color: #fafaf2;
+    text-align: center;
+    padding: 100px 15px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+
+    h1 {
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+      color: #ddd;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}

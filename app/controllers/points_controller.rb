@@ -1,5 +1,5 @@
 class PointsController < ApplicationController
-  before_action :private_access, except: [:index, :show]
+  before_action :private_access
 
   def index
     @point = Point.all
