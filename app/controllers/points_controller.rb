@@ -11,6 +11,7 @@ class PointsController < ApplicationController
 
   def create
     @point = Point.new(point_params)
+    @point.user = current_user
     if @point.save
       redirect_to points_path, notice: "El punto fue Ingresado con éxito"
     else

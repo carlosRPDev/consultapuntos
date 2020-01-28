@@ -2,6 +2,14 @@
   <header class="point-header">
     <h1><%= @point.name %></h1>
     <p><%= @point.ccosto %></p>
+
+    <% if signed_in? && @point.user == current_user %>
+      <div class="actions">
+        <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_point_path(@point) %>
+        <%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, @point, method: :delete, data: { confirm: "Se eliminara el registro" } %>
+      </div>
+    <% end %>
+
   </header>
 </div>
 
