@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_24_075200) do
+ActiveRecord::Schema.define(version: 2020_01_28_160305) do
 
   create_table "points", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2020_01_24_075200) do
     t.string "ipcom"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_points_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -32,4 +34,5 @@ ActiveRecord::Schema.define(version: 2020_01_24_075200) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "points", "users"
 end

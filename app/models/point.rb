@@ -12,9 +12,12 @@
 #  ipcom       :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  user_id     :integer
 #
 
 class Point < ActiveRecord::Base
+  belongs_to :user
+
   validates :name, presence: true;
   validates :ccosto, presence: true;
   validates :tecnologia, presence: true;
