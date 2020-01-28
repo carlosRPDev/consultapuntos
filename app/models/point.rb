@@ -15,4 +15,11 @@
 #
 
 class Point < ActiveRecord::Base
+  validates :name, presence: true;
+  validates :ccosto, presence: true;
+  validates :tecnologia, presence: true;
+  validates :observacion, presence: true;
+  validates :ipradio, presence: true;
+  validates :iptele, presence: true;
+  validates :ipcom, presence: true;
 end

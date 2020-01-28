@@ -2,6 +2,17 @@
   <div class="row border border-bottom bg-light shadow rounded">
     <div class="col-sm-7 pt-3">
       <h1><%= form_title %></h1>
+
+      <% if @point.errors.any? %>
+        <div class="alert alert-danger">
+          <ul>
+            <% @point.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
     </div>
     <div class="col-sm-5 pt-3">
       <%= form_for @point do |f| %>
